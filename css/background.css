@@ -1,0 +1,305 @@
+/*
+1.每一个不同地方的css会空两行
+2.参考: https://www.antmoe.com/posts/a811d614/
+  https://butterfly.lete114.top/article/Butterfly-config.html
+
+*/
+
+/* 版权链接去掉下划线 */
+.layout_post .post-copyright .post-copyright-info a {
+    text-decoration: none;
+}
+
+
+/* 博主昵称颜色 --也就是首页侧边栏头像下面那个昵称*/
+.author-info__name {
+    color: #9e53b0;
+}
+
+
+/* 页脚透明 */
+#footer {
+    background: transparent !important;
+}
+
+
+/* 首页中间打字效果上方 */
+#page-header #site_title {
+    color: #80bdab;
+}
+
+
+/* 顶部导航栏 */
+#nav a {
+    color: #f8f8f8;
+}
+
+
+/*页脚自定义字段字体颜色,也就是配置文件里的footer_custom_text*/
+.footer_custom_text {
+    color: #EEEEEE;
+}
+
+
+/*鼠标样式*/
+body {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),
+        default;
+}
+a,
+img {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
+        default;
+}
+
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(73, 177, 245, 0.2);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dab8b8;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.4) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.4) 75%,
+    transparent 75%,
+    transparent
+  );
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #49b1f5;
+}
+
+
+/* a标签默认颜色 */
+#article-container a {
+    color: #00c4b6;
+    text-decoration: none;
+}
+
+
+/* 鼠标悬停时的颜色 */
+#article-container a:hover {
+    color: #e58a8a;
+}
+
+
+/*a标签颜色*/
+a {
+    color: #00c4b6;
+}
+
+
+/*文章顶部图透明*/
+#page-header {
+     background: transparent !important;
+}
+#page-header.post-bg:before {
+     position: absolute;
+     top: 0;
+     left: 0;
+     display: block;
+     width: 100%;
+     height: 100%;
+     background: transparent !important; /*这个rgba可以自己改*/
+     content: '';
+}
+
+
+
+#web_bg {
+  /* 背景图像的地址（url括号里）  */
+  background: url();
+  /* 背景图像不重复 */
+  background-repeat: no-repeat;
+  /* 背景图像大小 */
+  background-size: cover;
+}
+/*渐变色
+#web_bg {
+  background: linear-gradient(
+    to right bottom,
+    rgb(0, 255, 240),
+    rgb(92, 159, 247) 40%,
+    rgb(211, 34, 255) 80%
+  );
+}  */
+
+/*图片渐变*/
+#web_bg {
+  background-image: url('https://s1.imagehub.cc/images/2022/12/05/3e27a008fdab4a3802b6d4014dd50e88.jpeg'),
+    linear-gradient(
+      60deg,
+      rgba(255, 165, 150, 0.5) 5%,
+      rgba(0, 228, 255, 0.35)
+    ),
+    url('https://s1.imagehub.cc/images/2022/12/05/3e27a008fdab4a3802b6d4014dd50e88.jpeg');
+}
+
+/*页面随机全屏背景
+//随机背景图片数组,图片可以换成图床链接，注意最后一条后面不要有逗号
+var backimg =[
+  "url()",
+  "url()",
+  "url(https://gitee.com/youthlql/randombg/raw/master/lql_bg/00184.webp)"  
+  ];
+  //获取背景图片总数，生成随机数
+  var bgindex =Math.ceil(Math.random() * (backimg.length-1));
+  //重设背景图片
+  document.getElementById("web_bg").style.backgroundImage = backimg[bgindex];
+  //重设banner图片
+  document.getElementById("page-header").style.backgroundImage = backimg[bgindex];
+
+
+
+
+
+/*--------------------下面是暂时用不到的css样式--------------------*/
+
+
+/* 自定义字体，暂时用不到先注释掉*/
+/* @font-face {
+    font-family: 'mycustom_font';
+    src: url('https://cdn.jsdelivr.net/gh/youthlql/static/font/chun_feng_kai.ttf');
+	font-size: 16px;
+} */
+
+
+
+
+
+
+
+
+
+/*
+    Name:     Kimbie (dark)
+    Author:   Jan T. Sott
+    License:  Creative Commons Attribution-ShareAlike 4.0 Unported License
+    URL:      https://github.com/idleberg/Kimbie-highlight.js
+*/
+
+/* 新添加的內容
+  ------------------------------------- 
+  --hl-color                  代碼框字體顔色 【必須】 (把下面.hljs的 color複製到這裏來)
+  --hl-bg                     代碼框背景色 【必須】 (把下面.hljs的 background複製到這裏來)
+  --hltools-bg: #321a0f       代碼框頂部工具欄背景色 【可選】(如果你關掉了 copy、lang 和 shrink,可不用配置這個）
+  --hltools-color: #fff       代碼框頂部工具欄字體顔色 【可選】(如果你關掉了 copy、lang 和 shrink,可不用配置這個）
+  --hlnumber-bg: #221a0f      代碼框行數背景色 【可選】(如果已經關掉 line_number,可以不用配置這個)
+  --hlnumber-color: #fff      代碼框行數字體顔色 【可選】 (如果已經關掉 line_number,可以不用配置這個)
+  --hlscrollbar-bg: #d3af86   代碼框滾動條顔色 【可選】（默認為主題主顔色）
+  --hlexpand-bg: #d3af86      代碼框底部展開背景色 【可選】(如果已經關掉 highlight_height_limit,可以不用配置這個)
+*/
+
+/*
+:root {
+  --hl-color: #d3af86;
+  --hl-bg: #221a0f;
+  --hltools-bg: #321a0f;
+  --hltools-color: #fff;
+  --hlnumber-bg: #221a0f;
+  --hlnumber-color: #fff;
+  --hlscrollbar-bg: #d3af86;
+  --hlexpand-bg: #d3af86;
+}
+*/
+
+/* Kimbie Comment */
+/*
+.hljs-comment,
+.hljs-quote {
+  color: #d6baad;
+}
+*/
+
+/* Kimbie Red */
+/*
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-meta {
+  color: #dc3958;
+}
+
+
+/* Kimbie Orange */
+/*
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-deletion,
+.hljs-link {
+  color: #f79a32;
+}
+
+/* Kimbie Yellow */
+/*
+.hljs-title,
+.hljs-section,
+.hljs-attribute {
+  color: #f06431;
+}
+
+/* Kimbie Green */
+/*
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #889b4a;
+}
+
+/* Kimbie Purple */
+/*
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-function {
+  color: #98676a;
+}
+
+/* 更改的內容 把.hljs改為 #article-container figure.highlight .hljs *、
+/* ------------------------------------- */
+/*
+#article-container figure.highlight .hljs {
+  display: block;
+  overflow-x: auto;
+  background: #221a0f;
+  color: #d3af86;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+
+
